@@ -1,0 +1,207 @@
+/* Global Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: zoompronormalmedium;
+  src: url(/Fonts/ZoomPro-NormalMedium.otf);
+}
+
+/* NAV Section */
+.header {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+.header_img {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+nav {
+  min-height: 10vh;
+  width: calc(100% - 2em);
+  margin: auto;
+  display: flex;
+  bottom: 0;
+  position: absolute;
+  z-index: 2;
+  justify-content: space-around;
+  font-family: zoompronormalmedium;
+  font-size: 3rem;
+}
+
+.nav_links {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.nav_links li {
+  align-items: center;
+  display: flex;
+  list-style: none;
+  margin: 1rem 1rem 1rem 1rem;
+}
+
+.nav_links a {
+  color: white;
+  text-decoration: none;
+}
+
+#logo {
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+/* Products Section */
+
+.products {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.products-image img {
+  order: 1;
+  margin: 5rem 10rem 5rem 10rem;
+  height: 70vh;
+  flex: 1 1 25rem;
+  box-shadow: 0px 10px 40px black;
+  border-radius: 1rem;
+}
+
+.products-text {
+  order: 2;
+  margin: 5rem 10rem 5rem 10rem;
+  flex: 1 1 25rem;
+}
+
+/* About Section */
+
+.intro-about {
+  min-height: 100vh;
+  position: relative;
+}
+
+.intro-about img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-position: top;
+  object-fit: cover;
+}
+
+.about {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.about-image img {
+  height: 70vh;
+  order: 1;
+  flex: 1 1 25rem;
+  margin: 5rem 10rem 5rem 10rem;
+
+  box-shadow: 0px 10px 40px black;
+  border-radius: 1rem;
+}
+
+.about-text {
+  order: 0;
+  margin: 5rem 10rem 5rem 10rem;
+  flex: 1 1 25rem;
+}
+
+/* Team Section */
+
+.team-dreiz {
+  width: 100%;
+  margin: auto;
+  min-height: 50vh;
+  background-color: #c5d1dd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.team-id img {
+  height: 30vh;
+  width: 35vh;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1rem 1rem 0rem 0rem;
+}
+
+.team-photo {
+  box-shadow: 0px 10px 40px black;
+  border-radius: 1rem;
+  flex: 1 1 rem;
+  margin: 1rem 1rem 1rem 2rem;
+}
+
+/* Contact Section */
+.contact {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.contact img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-position: 0% 35%;
+  object-fit: cover;
+}
+
+.contact-adress {
+  z-index: 2;
+  color: white;
+  font-size: 2rem;
+  width: 40%;
+}
+
+.opening-times {
+  z-index: 2;
+  color: white;
+  font-size: 2rem;
+  width: 40%;
+}
+
+/* Footer Section */
+
+.footer {
+  height: 10vh;
+  display: flex;
+  position: relative;
+  background-color: black;
+  color: white;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
