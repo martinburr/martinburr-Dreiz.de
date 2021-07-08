@@ -17,6 +17,7 @@
   min-height: 100vh;
   display: flex;
   position: relative;
+  align-items: center;
 }
 
 .header_img {
@@ -24,7 +25,7 @@
   position: absolute;
   width: 100%;
   object-fit: cover;
-  object-position: top;
+  object-position: center;
 }
 
 nav {
@@ -58,39 +59,108 @@ nav {
 .nav_links a {
   color: white;
   text-decoration: none;
+  font-size: 2rem;
 }
 
-#logo {
+.logo {
   z-index: 2;
-  top: 50%;
   left: 50%;
+  top: 40%;
   transform: translate(-50%, -50%);
+  width: 90%;
   position: absolute;
+  display: flex;
+  margin: auto;
 }
 
 /* Products Section */
 
-#products {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
+.products-container {
+  min-height: 120vh;
+  max-width: 100%;
+  grid-gap: 2em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   align-items: center;
-  flex-wrap: wrap;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .products-image img {
+  height: 110vh;
+  min-width: 80vh;
+  object-fit: cover;
+  padding: 1rem;
+}
+
+.products-image {
+  place-self: center;
   order: 1;
-  margin: 5rem 10rem 5rem 10rem;
-  height: 70vh;
-  flex: 1 1 25rem;
-  box-shadow: 0px 10px 40px black;
-  border-radius: 1rem;
 }
 
 .products-text {
+  place-self: center;
+  padding: 2em;
+  order: 2;
+}
+
+.products-text h2 {
+  margin: 1rem;
+  font-size: 2.5rem;
+}
+
+.products-text h3 {
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+.products-text p {
+  margin: 1rem;
+  font-size: 1.2rem;
+  text-align: start;
+  line-height: 1.5;
+}
+
+.products-text {
+  place-self: center;
+  padding: 2em;
   order: 2;
   margin: 5rem 10rem 5rem 10rem;
   flex: 1 1 25rem;
+}
+
+.products-text h2 {
+  margin: 1rem;
+  font-size: 2.5rem;
+}
+
+.products-text h3 {
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+.products-text p {
+  margin: 1rem;
+  font-size: 1.2rem;
+  text-align: start;
+  line-height: 1.5;
+}
+
+.products-text h2 {
+  margin: 1rem;
+  font-size: 2.5rem;
+}
+
+.products-text h3 {
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+.products-text p {
+  margin: 1rem;
+  font-size: 1.2rem;
+  text-align: start;
+  line-height: 1.5;
 }
 
 /* About Section */
@@ -108,67 +178,98 @@ nav {
   object-fit: cover;
 }
 
-#about {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+.about-container {
+  min-height: 120vh;
+  max-width: 100%;
+  grid-gap: 2em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   align-items: center;
+  position: relative;
 }
 
 .about-image img {
-  height: 70vh;
-  order: 1;
-  flex: 1 1 25rem;
-  margin: 5rem 10rem 5rem 10rem;
+  height: 100%;
+  width: 100%;
+}
 
-  box-shadow: 0px 10px 40px black;
-  border-radius: 1rem;
+.about-image {
+  order: 1;
+  padding: 1rem;
+  place-self: center;
 }
 
 .about-text {
   order: 0;
-  margin: 5rem 10rem 5rem 10rem;
-  flex: 1 1 25rem;
+  padding: 4em;
+  place-self: center;
+}
+
+.about-text h2 {
+  margin: 1rem;
+  font-size: 2.5rem;
+}
+
+.about-text h3 {
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+.about-text p {
+  margin: 1rem;
+  font-size: 1.2rem;
+  text-align: start;
+  line-height: 1.5;
 }
 
 /* Team Section */
 
 .team-dreiz {
-  width: 100%;
+  max-width: 100%;
   margin: auto;
-  min-height: 50vh;
+  min-height: 80vh;
   background-color: #c5d1dd;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  text-align: center;
   flex-wrap: wrap;
 }
 
 .team-id img {
-  height: 30vh;
+  height: 50vh;
   width: 35vh;
   object-fit: cover;
   object-position: center;
-  border-radius: 1rem 1rem 0rem 0rem;
 }
 
 .team-photo {
-  box-shadow: 0px 10px 40px black;
-  border-radius: 1rem;
-  flex: 1 1 rem;
-  margin: 1rem 1rem 1rem 2rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  height: 60vh;
+  text-align: center;
+}
+
+.team-photo h4 {
+  color: black;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.team-photo p {
+  color: black;
+  font-size: 1.2rem;
 }
 
 /* Contact Section */
-#contact {
+.contact-container {
   min-height: 100vh;
   position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-end;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 #contact img {
@@ -179,18 +280,21 @@ nav {
   object-fit: cover;
 }
 
-.contact-adress {
+.contact-information {
   z-index: 2;
   color: white;
   font-size: 2rem;
   width: 40%;
 }
 
-.opening-times {
-  z-index: 2;
-  color: white;
+.contact-information p {
+  margin: 2rem;
   font-size: 2rem;
-  width: 40%;
+}
+
+.contact-information h5 {
+  margin: 2rem;
+  font-size: 3rem;
 }
 
 /* Footer Section */
@@ -204,4 +308,11 @@ nav {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+/* Media Query */
+@media screen and (max-width: 932px) {
+  html {
+    font-size: 80%;
+  }
 }
