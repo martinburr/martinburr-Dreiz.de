@@ -42,7 +42,7 @@ header {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url(/Photos/dreiz_02.jpg);
+  background-image: url(Photos/dreiz_02.jpg);
   background-position: 0% 10%;
   background-repeat: no-repeat;
   background-size: cover;
