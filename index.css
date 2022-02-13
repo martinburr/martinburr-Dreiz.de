@@ -11,55 +11,71 @@
   src: url(/Fonts/ZoomPro-NormalMedium.otf);
 }
 
+@font-face {
+  font-family: zoompronormalregular;
+  src: url(/Fonts/ZoomPro-NormalRegular.otf);
+}
+
+@font-face {
+  font-family: zoompronormalligth;
+  src: url(/Fonts/ZoomPro-NormalLight.otf);
+}
+
+@font-face {
+  font-family: zoomprocompactregualr;
+  src: url(/Fonts/ZoomPro-CompactRegular.otf);
+}
+
+@font-face {
+  font-family: zoomprocompactlight;
+  src: url(/Fonts/ZoomPro-CompactLight.otf);
+}
+
+
+body {
+  font-size: 16px;
+}
+
 /* NAV Section */
-.header {
-  width: 100%;
+header {
+  max-width: 100%;
   min-height: 100vh;
   display: flex;
-  position: relative;
   align-items: center;
+  background-image: url(/Photos/dreiz_02.jpg);
+  background-position: 0% 10%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
 }
 
-.header_img {
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-nav {
+.nav {
   min-height: 10vh;
-  width: calc(100% - 2em);
-  margin: auto;
+  width: 100%;
   display: flex;
-  bottom: 0;
   position: absolute;
-  z-index: 2;
-  justify-content: space-around;
-  font-family: zoompronormalmedium;
-  font-size: 3rem;
+  top: 85%;
 }
 
 .nav_links {
   display: flex;
   width: 100%;
   justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: center;
 }
 
 .nav_links li {
   align-items: center;
   display: flex;
   list-style: none;
-  margin: 1rem 1rem 1rem 1rem;
+  margin: 1em 0.5em 1em 0.5em;
 }
 
 .nav_links a {
   color: white;
   text-decoration: none;
-  font-size: 2rem;
+  font-family: zoompronormalmedium;
+  font-size: clamp(0.6rem, 4vw, 2rem);
+  z-index: 3;
 }
 
 .logo {
@@ -76,91 +92,51 @@ nav {
 /* Products Section */
 
 .products-container {
-  min-height: 120vh;
+  min-height: 100vh;
   max-width: 100%;
-  grid-gap: 2em;
+  grid-gap: 1em;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  align-items: center;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  grid-template-columns: auto auto;
+  align-content: center;
+  place-items: center;
+  margin-right: 2em;
+  margin-left: 2em;
 }
 
 .products-image img {
-  height: 110vh;
-  min-width: 80vh;
-  object-fit: cover;
-  padding: 1rem;
+  max-height: 90vh;
+  width: 100%;
+  padding: 1em;
 }
 
 .products-image {
-  place-self: center;
   order: 1;
+  place-self: center;
 }
 
 .products-text {
   place-self: center;
-  padding: 2em;
   order: 2;
+  padding: 1em;
+  text-align: start;
+  width: 50vw;
 }
 
 .products-text h2 {
-  margin: 1rem;
-  font-size: 2.5rem;
+  font-size: clamp(1.9rem, 12vw, 4rem);
+  font-family: zoompronormalregular;
 }
 
 .products-text h3 {
-  margin: 1rem;
-  font-size: 2rem;
+  padding-bottom: 1em;
+  font-size: clamp(1rem, 4vw, 1.3rem);
+  font-family: zoomprocompactregular;
 }
 
 .products-text p {
-  margin: 1rem;
-  font-size: 1.2rem;
-  text-align: start;
-  line-height: 1.5;
-}
-
-.products-text {
-  place-self: center;
-  padding: 2em;
-  order: 2;
-  margin: 5rem 10rem 5rem 10rem;
-  flex: 1 1 25rem;
-}
-
-.products-text h2 {
-  margin: 1rem;
-  font-size: 2.5rem;
-}
-
-.products-text h3 {
-  margin: 1rem;
-  font-size: 2rem;
-}
-
-.products-text p {
-  margin: 1rem;
-  font-size: 1.2rem;
-  text-align: start;
-  line-height: 1.5;
-}
-
-.products-text h2 {
-  margin: 1rem;
-  font-size: 2.5rem;
-}
-
-.products-text h3 {
-  margin: 1rem;
-  font-size: 2rem;
-}
-
-.products-text p {
-  margin: 1rem;
-  font-size: 1.2rem;
-  text-align: start;
-  line-height: 1.5;
+  font-size: clamp(0.8rem, 4vw, 1rem);
+  font-family: zoomprocompactlight;
+  line-height: 1.5rem;
 }
 
 /* About Section */
@@ -168,57 +144,57 @@ nav {
 .intro-about {
   min-height: 100vh;
   position: relative;
-}
-
-.intro-about img {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  object-position: top;
-  object-fit: cover;
+  max-width: 100%;
+  background-image: url(Photos/dreiz_01\ Kopie.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .about-container {
-  min-height: 120vh;
+  min-height: 100vh;
   max-width: 100%;
-  grid-gap: 2em;
+  grid-gap: 1em;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: auto auto;
   align-items: center;
-  position: relative;
+  place-items: center;
+  margin-right: 2em;
+  margin-left: 2em;
 }
 
 .about-image img {
-  height: 100%;
+  height: auto;
   width: 100%;
+  padding: 1em;
 }
 
 .about-image {
   order: 1;
-  padding: 1rem;
-  place-self: center;
+  place-items: center;
 }
 
 .about-text {
   order: 0;
-  padding: 4em;
-  place-self: center;
+  padding: 1em;
+  width: 50vw;
+  text-align: start;
 }
 
 .about-text h2 {
-  margin: 1rem;
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 12vw, 4rem);
+  font-family: zoompronormalregular;
 }
 
 .about-text h3 {
-  margin: 1rem;
-  font-size: 2rem;
+  padding-bottom: 1em;
+  font-size: clamp(1rem, 4vw, 1.3rem);
+  font-family: zoomprocompactregular;
 }
 
 .about-text p {
-  margin: 1rem;
-  font-size: 1.2rem;
-  text-align: start;
+  font-size: clamp(0.8rem, 4vw, 1rem);
+  font-family: zoomprocompactlight;
   line-height: 1.5;
 }
 
@@ -226,13 +202,20 @@ nav {
 
 .team-dreiz {
   max-width: 100%;
-  margin: auto;
   min-height: 80vh;
+  padding: 2em;
+  padding-bottom: 0.5em;
   background-color: #c5d1dd;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  flex-wrap: wrap;
+  
+}
+
+.team-id {
+  display: flex;
+  justify-content: center;
 }
 
 .team-id img {
@@ -243,76 +226,162 @@ nav {
 }
 
 .team-photo {
-  margin-top: 1rem;
-  margin-right: 1rem;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
+  margin: 1em;
   height: 60vh;
   text-align: center;
 }
 
 .team-photo h4 {
   color: black;
-  padding: 1rem;
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: clamp(1.0rem, 4vw, 1.6rem);
+  font-family: zoompronormalregular;
 }
 
 .team-photo p {
   color: black;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  font-family: zoompronormallight;
 }
 
 /* Contact Section */
 .contact-container {
   min-height: 100vh;
+  max-width: 100%;
   position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-}
-
-#contact img {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  object-position: 0% 35%;
-  object-fit: cover;
+  padding-right: 2em;
+  background-image: url(Photos/dreiz_03.2.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .contact-information {
   z-index: 2;
   color: white;
-  font-size: 2rem;
-  width: 40%;
+  text-align: justify;
 }
 
 .contact-information p {
-  margin: 2rem;
-  font-size: 2rem;
+  line-height: 1.2em;
+  font-size: clamp(0.9rem, 3vw, 1.5rem);
+  font-family: zoompronormalligth;
+  padding-bottom: 0.5em;
 }
 
 .contact-information h5 {
-  margin: 2rem;
-  font-size: 3rem;
+  padding-bottom: 0.5em;
+  line-height: 2em;
+  font-size: clamp(1.2rem, 8vw, 3rem);
+  font-family: zoompronormalmedium;
 }
 
 /* Footer Section */
 
 .footer {
-  height: 10vh;
+  min-height: 5vh;
+  background-color: white;
+  color: black;
+  max-width: 100%;
   display: flex;
-  position: relative;
-  background-color: black;
-  color: white;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: space-around;
+  font-family: zoompronormalligth;
+  font-size: clamp(0.7rem, 2.5vw, 1rem);
   flex-wrap: wrap;
 }
 
+.codingsbums {
+  order: 3;
+  text-align: center;
+  flex: 1 1 1;
+  margin: 0.5em;
+}
+
+.impressum {
+  order: 2;
+  text-align: center;
+  flex: 1 1 1;
+  margin: 0.5em;
+}
+
+.all-rights {
+  order: 1;
+  text-align: center;
+  flex: 1 1 1;
+  margin: 0.5em;
+}
+
 /* Media Query */
-@media screen and (max-width: 932px) {
-  html {
-    font-size: 80%;
+
+@media only screen 
+   and (max-width : 1200px) {
+    header { 
+      background-position: 100% 10%;
+    }
+    .nav {
+      top: 85%;
+    }
+}
+
+@media only screen 
+   and (max-width : 800px) {
+  header { 
+    background-position: 100% 10%;
   }
+  .nav {
+    top: 0%;
+  }
+  .products-container {
+    grid-template-columns: auto;
+  }
+  .products-text {
+    width: auto;
+  }
+  .about-container {
+    grid-template-columns: auto;
+  }
+  .about-text {
+    width: auto;
+  }
+  .contact-container {
+    padding-right: 1em;
+  }
+  }
+
+@media only screen 
+   and (max-width : 300px) {
+    header { 
+      background-position: 100% 10%;
+    }
+    .nav {
+      top: 0%;
+    }
+    .products-container {
+      margin-left: 0em;
+      margin-right: 0em;
+    }
+    .about-container {
+      margin-left: 0em;
+      margin-right: 0em;
+    }
+    .contact-container {
+      justify-content: center;
+      padding-right: 0em;
+    } 
+    .contact-information {
+      text-align: center;
+    }
+}
+
+@media only screen 
+   and (max-width : 200px) {
+    header { 
+      background-position: 100% 10%;
+    }
+    .nav {
+      top: 0%;
+    }
 }
